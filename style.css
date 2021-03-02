@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.external{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #B50100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(40%);
+}
+
+
+.mid{
+    position: relative;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: #B50100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(20%);
+    transform: rotate(0deg);
+    animation: rotates 1.5s 0.5s 3 ease;
+
+}
+
+.center{
+    position:absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+
+.midd{
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: black;
+    top: 17px;
+    left: 0;
+    z-index: 50;
+    animation: decalage 1s 3s forwards;
+}
+
+.midd::before{
+    content: ",";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 101px;
+    color: black;
+    font-size: 200px;
+    transform: rotate(-230deg);
+    left: 124px;
+}
+
+
+@keyframes decalage{
+    from{
+        top: 17px;
+        left: 0;
+    }
+    to{
+        top: -22px;
+        left: 70px;
+    }
+}
+
+
+.middd{
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: black;
+    bottom: 17px;
+    right: 0;
+    z-index: 50;
+    opacity: 0;
+    animation: appear 50ms 2s forwards,
+                bougerDeuxieme 1s 3s forwards;
+
+    
+}
+
+
+.middd::before{
+    content: ",";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -98px;
+    color: black;
+    font-size: 200px;
+    transform: rotate(-50deg);
+    left: -122px;
+}
+
+
+.midddd::before{
+    content: ",";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -153px;
+    color: black;
+    font-size: 200px;
+    transform: rotate(12deg);
+    left: 28px;
+}
+
+@keyframes bougerDeuxieme{
+    from{
+        bottom: 17px;
+        right: 0;
+    }
+    to{
+        bottom: 27px;
+        right: -4px;
+    }
+}
+
+.midddd{
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: black;
+    bottom: 27px;
+    left: -4px;
+    z-index: 50;
+    opacity: 0;
+    animation: appear 50ms 3.5s forwards;
+            
+              
+}
+
+
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+@keyframes rotates{
+    0%{
+        transform: rotate(0);
+    }
+    
+    100%{
+        transform: rotate(360deg);
+    }
+}
