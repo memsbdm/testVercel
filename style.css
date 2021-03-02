@@ -11,10 +11,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(gif3.gif);
-    
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(gif.gif);
+    background-size: contain;
 }
 
 
